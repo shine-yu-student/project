@@ -1,4 +1,3 @@
-#define _USE_BFS_TMP
 #ifdef _USE_BFS_TMP
 #include<iostream>
 #include<utility>
