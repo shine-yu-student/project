@@ -10,10 +10,17 @@ namespace diy{
 		SingleLinkedElement(){}
 		SingleLinkedElement(_Tp val,SingleLinkedElement next=nullptr):_val(val),_next(next){}
 	};
-	#define _SLE SingleLinkedElement
 	template<typename _Tp>
 	class SingleLinkedList{
-		_SLE<_Tp> _dummy;
-		
+		SingleLinkedElement<_Tp> *_dummy=new SingleLinkedElement<_Tp>();
+		SingleLinkedList(){}
+		SingleLinkedList(std::vector<_Tp> v){
+			SingleLinkedElement<_Tp> *p=_dummy;
+			for(auto &i:v){
+				p->_next=new SingleLinkedElement<_Tp>(i);
+				p=p->next;
+			}
+		}
 	};
+	#undef _SLE
 }
