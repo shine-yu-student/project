@@ -1,4 +1,4 @@
-#include "lib/diy_search.hpp"
+#include "../../lib/diy_search.hpp"
 using namespace diy;
 using namespace std;
 int main(){

@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<cstring>
 namespace diy{
 	/**
 	 * @brief It does what you think.
@@ -68,5 +69,19 @@ namespace diy{
 			else p2=mid;
 		}
 		return nullptr;
+	}
+	std::vector<size_t> linearPrimeSearch(size_t limit){
+		bool vis[limit+1];
+		std::vector<size_t> v;
+		memset(vis,0,sizeof(vis));
+		for(size_t i=2;i<=limit;i++){
+			if(!vis[i]){
+				v.push_back(i);
+				for(size_t j=i*i;j<=limit;j+=i){
+					vis[j]=true;
+				}
+			}
+		}
+		return v;
 	}
 }
