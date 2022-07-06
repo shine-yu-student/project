@@ -1,0 +1,10 @@
+{
+	"C_Cpp.dimInactiveRegions": true,
+	"files.associations": {
+		"ostream": "cpp",
+		"iostream": "cpp",
+		"array": "cpp",
+		"*.tcc": "cpp",
+		"type_traits": "cpp"
+	}
+}
